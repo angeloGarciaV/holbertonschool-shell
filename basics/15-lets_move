@@ -1,0 +1,2 @@
+#!/bin/bash
+mv file -name "[[:upper]]*" /tmp/u
