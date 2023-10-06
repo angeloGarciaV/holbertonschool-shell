@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -clat . .. /boot
+ls -cla . .. /boot
