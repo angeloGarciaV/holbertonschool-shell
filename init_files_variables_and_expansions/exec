@@ -1,0 +1,13 @@
+#!/bin/bash
+
+directory="."  # Replace with the directory where you want to find the most recent file
+
+# Find the most recently created file
+most_recent_file=$(find "$directory" -type f -printf '%T@ %p\n' | sort -n | tail -n 1 | cut -f2- -d" ")
+
+if [ -n "$most_recent_file" ]; then
+    chmod u+x "$most_recent_file"
+    echo "Made the most recent file executable: $most_recent_file"
+else
+    echo "No files found in the directory."
+fi
